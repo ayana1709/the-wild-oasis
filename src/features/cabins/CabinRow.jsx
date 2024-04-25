@@ -53,7 +53,7 @@ function CabinRow({ cabin }) {
   } = cabin;
 
   const queryClient = useQueryClient();
-  const { isLoading, isDeleting, mutate } = useMutation({
+  const { isLoading: isDeleting, mutate } = useMutation({
     mutationFn: delateCabin,
     onSuccess: () => {
       queryClient.invalidateQueries({
